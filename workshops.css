@@ -1,0 +1,45 @@
+.workshop-slide .two{grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr);gap:clamp(28px,5vw,76px)}
+.workshop-copy{display:grid;gap:18px}
+.workshop-slide .bullets{gap:14px}
+.workshop-slide .visual{width:100%;min-width:0}
+.workshop-visual-grid,.workshop-flow,.workshop-matrix{width:100%;display:grid;gap:12px}
+.workshop-visual-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.workshop-visual-grid article,.workshop-flow article,.workshop-matrix article,.workshop-prompt{min-width:0;padding:clamp(16px,2vw,25px);border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 10px 25px #2025340c}
+.workshop-visual-grid article>b,.workshop-flow article>b{display:block;margin-bottom:12px;color:var(--coral);font-size:clamp(25px,3vw,40px)}
+.workshop-visual-grid h3,.workshop-flow h3,.workshop-matrix h3{margin-bottom:8px;font-size:clamp(16px,1.5vw,22px)}
+.workshop-visual-grid p,.workshop-flow p,.workshop-matrix p{color:#586174;font-size:clamp(14px,1.2vw,18px);line-height:1.5}
+.workshop-flow{grid-template-columns:1fr}
+.workshop-flow article{display:grid;grid-template-columns:48px 1fr;column-gap:12px;align-items:start}
+.workshop-flow article>b{grid-row:span 2;margin:0}
+.workshop-matrix{grid-template-columns:repeat(2,minmax(0,1fr))}
+.workshop-matrix article:nth-child(1){background:#e9eefc}
+.workshop-matrix article:nth-child(2){background:#fff0e8}
+.workshop-matrix article:nth-child(3){background:#e7f5ef}
+.workshop-matrix article:nth-child(4){background:#fff5d9}
+.workshop-prompt{padding:clamp(20px,3vw,38px);background:#fff0e8}
+.workshop-prompt>span{display:block;margin-bottom:14px;color:var(--coral);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.workshop-prompt p{font-size:clamp(18px,2vw,28px);line-height:1.5}
+.workshop-slide .number{z-index:1}
+body.export-mode .controls,body.export-mode .progress,body.export-mode .notes,body.export-mode .overview-dialog{display:none!important}
+@media(max-width:720px){
+  .workshop-slide .two{grid-template-columns:1fr}
+  .workshop-slide .visual{min-height:0}
+  .workshop-flow{grid-template-columns:1fr}
+  .workshop-matrix{grid-template-columns:1fr}
+}
+@page{size:13.333in 7.5in;margin:0}
+@media print{
+  html,body{width:13.333in;height:auto;margin:0;background:#fff!important}
+  .deck-shell{width:13.333in;height:auto!important;min-height:0;overflow:visible!important}
+  .stage{width:13.333in;height:auto!important;padding:0!important;overflow:visible!important}
+  .slide{width:13.333in;height:7.5in;min-height:0;max-width:none!important;margin:0;padding:.55in .75in;overflow:hidden;break-after:page;page-break-after:always}
+  .slide:last-child{break-after:auto;page-break-after:auto}
+  .image-slide{padding:0!important}
+  .image-slide img{width:100%;height:100%;object-fit:contain}
+  .controls,.progress,.notes,.overview-dialog{display:none!important}
+  .workshop-slide .two{grid-template-columns:minmax(0,1.05fr) minmax(300px,.95fr)}
+  .workshop-slide .visual{min-height:0}
+  .workshop-flow{grid-template-columns:1fr}
+  .workshop-matrix{grid-template-columns:repeat(2,minmax(0,1fr))}
+  *,*:before,*:after{animation:none!important;transition:none!important}
+}

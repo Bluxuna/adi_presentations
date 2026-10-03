@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Voice AI: პოდკასტები, აუდიოწიგნები და ასისტენტები">
+  <title>ვორკშოპი 7</title>
+  <link rel="stylesheet" href="../workshop_01/styles.css">
+  <link rel="stylesheet" href="../workshops.css">
+</head>
+<body>
+  <main class="deck-shell" aria-label="ვორკშოპის პრეზენტაცია">
+    <section id="stage" class="stage" aria-live="polite"></section>
+    <aside id="notes" class="notes" aria-label="სპიკერის ჩანაწერები" hidden></aside>
+    <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+    <nav class="controls" aria-label="პრეზენტაციის მართვა">
+      <button id="prevButton" class="icon-button" type="button" aria-label="წინა სლაიდი">←</button>
+      <span id="counter" class="counter" aria-live="polite"></span>
+      <button id="nextButton" class="icon-button" type="button" aria-label="შემდეგი სლაიდი">→</button>
+      <button id="overviewButton" class="text-button" type="button">სლაიდები</button>
+      <button id="notesButton" class="text-button" type="button">ჩანაწერები</button>
+      <button id="fullscreenButton" class="text-button" type="button">სრული ეკრანი</button>
+    </nav>
+  </main>
+  <dialog id="overview" class="overview-dialog" aria-label="სლაიდების მიმოხილვა">
+    <div class="overview-header"><h2>სლაიდების მიმოხილვა</h2><button id="closeOverview" class="icon-button" type="button" aria-label="დახურვა">×</button></div>
+    <div id="overviewGrid" class="overview-grid"></div>
+  </dialog>
+  <script src="../workshops.js"></script>
+  <script src="../workshop_deck.js"></script>
+</body>
+</html>
